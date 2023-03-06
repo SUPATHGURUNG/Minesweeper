@@ -55,7 +55,7 @@ public void displayLosingMessage()
     //your code here
     for(int i = 0; i < NUM_ROWS; i++)
       for(int j = 0; j < NUM_COLS; j++)
-        buttons[i][j].setLabel("NT");
+        buttons[i][j].setLabel(":(");
     for(int i = 0; i < NUM_ROWS; i++)
       for(int j = 0; j < NUM_COLS; j++)
         if(mines.contains(buttons[i][j]) && buttons[i][j].clicked == false)
@@ -67,7 +67,7 @@ public void displayWinningMessage()
     //your code here
     for(int i = 0; i < NUM_ROWS; i++)
       for(int j = 0; j < NUM_COLS; j++)
-        buttons[i][j].setLabel("W!");
+        buttons[i][j].setLabel(":)");
 }
 public boolean isValid(int r, int c)
 {
@@ -132,15 +132,14 @@ public class MSButton
     }
     public void draw ()
     {    
-        if(flagged){
+        if(flagged)
             fill(0);
-    }
         else if(clicked && mines.contains(this))
             fill(255,0,0);
         else if(clicked)
-            fill(200,255,200);
+            fill(200);
         else
-            fill(255);
+            fill(100);
         rect(x, y, width, height);
         fill(0);
         text(myLabel,x+width/2,y+height/2);
