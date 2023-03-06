@@ -136,7 +136,7 @@ public class MSButton
             fill((float)Math.random()*256,(float)Math.random()*50,(float)Math.random()*50);
     }
         else if(clicked && mines.contains(this))
-            fill((float)Math.random()*256+255,(float)Math.random()*256,(float)Math.random()*256);
+            fill(0);
         else if(clicked)
             fill(200,255,200);
         else
