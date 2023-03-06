@@ -67,7 +67,7 @@ public void displayWinningMessage()
     //your code here
     for(int i = 0; i < NUM_ROWS; i++)
       for(int j = 0; j < NUM_COLS; j++)
-        buttons[i][j].setLabel("NJ");
+        buttons[i][j].setLabel("W!");
 }
 public boolean isValid(int r, int c)
 {
@@ -133,10 +133,10 @@ public class MSButton
     public void draw ()
     {    
         if(flagged){
-            fill((float)Math.random()*256,(float)Math.random()*50,(float)Math.random()*50);
+            fill(0);
     }
         else if(clicked && mines.contains(this))
-            fill(0);
+            fill(255,0,0);
         else if(clicked)
             fill(200,255,200);
         else
